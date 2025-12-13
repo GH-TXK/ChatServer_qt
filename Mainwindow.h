@@ -22,7 +22,6 @@
 // };
 // #endif // MAINWINDOW_H
 
-
 // #pragma once
 // #include <QMainWindow>
 // class QTextEdit; class QLineEdit; class QPushButton;
@@ -40,20 +39,23 @@
 //     void appendLine(const QString& line);
 // };
 
-
 #pragma once
 #include <QMainWindow>
-class QTextEdit; class QLineEdit; class QPushButton;
+class QTextEdit;
+class QLineEdit;
+class QPushButton;
 class ChatClient;
 
-class MainWindow : public QMainWindow {
+class MainWindow : public QMainWindow
+{
     Q_OBJECT
 public:
-    explicit MainWindow(QWidget* parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
+
 private:
-    QTextEdit* chatView;
-    QLineEdit* input;
-    QPushButton* sendBtn;
-    ChatClient* client;
-    void appendLine(const QString& line, bool isSelf = false);
+    QTextEdit *chatView;
+    QLineEdit *input;
+    QPushButton *sendBtn;
+    ChatClient *client;
+    void appendLine(const QString &line, bool isSelf = false);
 };
